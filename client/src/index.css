@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+    @font-face {
+        font-family: "Playfair Display";
+        font-style: normal;
+        font-weight: 400 700;
+        font-display: swap;
+        src: url("/fonts/PlayfairDisplay.woff2") format("woff2");
+    }
+}
+
+/* Step 2: Use @theme to define a CSS variable for your font-family */
+@theme {
+    --font-playfair: "Playfair Display", serif;
+}
+
+/* --- */
+
+.head {
+    background-color: aquamarine;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
