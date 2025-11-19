@@ -14,12 +14,17 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["https://artist-zeta.vercel.app", "http://localhost:3000"],
+    origin: [
+      "https://artist-zeta.vercel.app",
+      "http://localhost:3000",
+      "http://localhost:5173",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 let isConnected = false;
