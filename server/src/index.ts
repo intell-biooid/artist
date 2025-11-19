@@ -63,7 +63,8 @@ app.use((err: any, _req: Request, res: Response) => {
 });
 
 // Start server
-const PORT = process.env.BACKEND_PORT || 7001;
-app.listen(PORT, () => {
+const PORT = Number(process.env.PORT) || 7001;
+
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
