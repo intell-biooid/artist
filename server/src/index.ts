@@ -15,7 +15,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://artist-zeta.vercel.app",
+      "https://artist-one-peach.vercel.app",
       "http://localhost:3000",
       "http://localhost:5173",
     ],
